@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123b3d">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="2026 年 10 月 2 日至 11 日，日本九州十天双人旅行计划。每日行程、交通、酒店、预算与预约清单。">
+  <title>九州十天｜轻松行程</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到行程</a>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="eyebrow"><span class="spark"></span> 2026 · KYUSHU JOURNAL</div>
+      <h1>九州十天<span>轻松走</span></h1>
+      <p class="hero-sub">10月2日—11日 · 两人九晚 · 日本当地时间</p>
+      <div class="route" aria-label="旅行路线">
+        <span>福冈</span><i></i><span>熊本</span><i></i><span>鹿儿岛</span><i></i><span>别府</span><i></i><span>由布院</span><i></i><span>福冈</span>
+      </div>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#main">查看每日行程 <span aria-hidden="true">↗</span></a>
+        <button id="todayBtn" class="ghost-btn" type="button">跳到今天</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrap">
+      <aside class="notice" role="note">
+        <div class="notice-mark">!</div>
+        <p><strong>出行前再核对班次。</strong>此页按原 Excel 整理，资料核查日期为 2026-09-21；列车、巴士、票价、营业与天气可能变化。标为“建议”的时间不是已订车票。<a href="#sources">查看官方来源</a></p>
+      </aside>
+
+      <section id="main" class="section itinerary">
+        <div class="section-heading">
+          <div><p class="kicker">01 / THE JOURNEY</p><h2>每日行程</h2></div>
+          <p>选一天，按时间顺序看安排</p>
+        </div>
+        <div class="day-strip-wrap"><div class="day-strip" id="dayStrip" role="tablist" aria-label="选择日期"></div></div>
+        <div id="dayPanel" class="day-panel" role="tabpanel"></div>
+      </section>
+
+      <section id="checklist" class="section">
+        <div class="section-heading"><div><p class="kicker">02 / BEFORE YOU GO</p><h2>预约与确认</h2></div><p>重要事项集中在这里</p></div>
+        <div class="checklist-intro">勾选进度只保存在这台设备的浏览器中；请以订票记录和官方通知为准。</div>
+        <div class="filter-row" id="taskFilters" aria-label="筛选待办"></div>
+        <div id="tasks" class="stack"></div>
+      </section>
+
+      <section id="transport" class="section">
+        <div class="section-heading"><div><p class="kicker">03 / GETTING AROUND</p><h2>交通速查</h2></div><p>JR券、关键接驳与备选</p></div>
+        <div class="pass-card">
+          <div><span class="pass-small">JR KYUSHU RAIL PASS</span><h3>全九州 7 日券</h3><p>计划启用 10/3—10/9 · 连续 7 个自然日</p></div>
+          <div class="pass-price"><strong>¥25,000–26,000</strong><span>每人参考价</span></div>
+        </div>
+        <p class="fineprint">交通预算和单买票比较来自原表，实际结算、使用资格与指定席请以 JR 九州为准。博多—小仓的山阳新干线不在此券范围内。</p>
+        <div id="transportList" class="accordion-list"></div>
+      </section>
+
+      <section id="stays" class="section">
+        <div class="section-heading"><div><p class="kicker">04 / REST STOPS</p><h2>酒店与行李</h2></div><p>七笔订单覆盖九晚</p></div>
+        <div id="staysList" class="stay-grid"></div>
+      </section>
+
+      <section id="budget" class="section">
+        <div class="section-heading"><div><p class="kicker">05 / THE NUMBERS</p><h2>两人预算</h2></div><p>日元 · 不含机票和酒店</p></div>
+        <div class="budget-total"><span>规划总额</span><strong>¥182,460 <em>—</em> ¥249,500</strong><small>两人合计，含交通、门票、餐饮和机动</small></div>
+        <div id="budgetList" class="accordion-list"></div>
+        <p class="fineprint">餐饮已统一预留，不要把下方美食建议再次累加。花火有料席、砂汤、购物等未计入。</p>
+      </section>
+
+      <section id="more" class="section">
+        <div class="section-heading"><div><p class="kicker">06 / ON THE WAY</p><h2>景点与美食</h2></div><p>开放时间、门票和顺路用餐</p></div>
+        <div class="subhead"><h3>景点门票</h3><span>17 处</span></div>
+        <div id="attractions" class="accordion-list"></div>
+        <div class="subhead extra-top"><h3>顺路用餐</h3><span>按日期参考</span></div>
+        <div id="food" class="accordion-list"></div>
+      </section>
+
+      <section id="sources" class="section sources-section">
+        <div class="section-heading"><div><p class="kicker">07 / SOURCE NOTES</p><h2>来源与说明</h2></div></div>
+        <p>本网页由你提供的《九州10天旅游计划_轻松行程最新版.xlsx》转换。原表核查日期：2026-09-21。网页发布后不会自动同步 Excel 的修改，也不会实时更新票务或运行状态。</p>
+        <details><summary>查看全部来源链接 <span aria-hidden="true">＋</span></summary><div id="sourceList" class="source-list"></div></details>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><p>九州十天 · 2026.10.02—10.11</p><a href="#top">回到顶部 ↑</a></footer>
+  <nav class="bottom-nav" aria-label="页面导航"><a href="#main">行程</a><a href="#checklist">待办</a><a href="#transport">交通</a><a href="#more">更多</a></nav>
+</body>
+</html>
